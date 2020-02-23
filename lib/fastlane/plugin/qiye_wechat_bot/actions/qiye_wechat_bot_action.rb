@@ -15,10 +15,9 @@ module Fastlane
           curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=#{key}' \
              -H 'Content-Type: application/json' \
              -d '{
-              "msgtype": "text", 
-              "text": {
-                  "content": "#{text}",
-                  "mentioned_list": ["#{at_all}"]
+              "msgtype": "markdown", 
+              "markdown": {
+                  "content": "#{text}"
                 }
               }'
           }
